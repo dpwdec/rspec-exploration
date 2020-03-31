@@ -5,7 +5,8 @@ class Namer
   @@names = []
   
   def load_names
-    CSV.foreach("names.csv") do |row|
+    puts "trying to load"
+    CSV.foreach("./names.csv") do |row|
       i_name, i_age = row
       @@names << {name: i_name, age: i_age}
     end
