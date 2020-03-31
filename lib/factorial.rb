@@ -1,5 +1,5 @@
 class Factorial
-    def factorial_of(n)
-        120
-    end
+  def factorial_of(n)
+    (1..n).inject(:*)
+  end
 end
