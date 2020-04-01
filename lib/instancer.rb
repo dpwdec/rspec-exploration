@@ -64,3 +64,16 @@ class QRanger
     rand(@range[0]..@range[1])
   end
 end
+
+class MethodHolder
+  
+  def give_me(num)
+    num
+  end
+  
+end
+
+def give_square(n)
+  n*n
+end
+  

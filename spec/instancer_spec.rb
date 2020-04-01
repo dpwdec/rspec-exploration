@@ -94,3 +94,17 @@ describe QRanger do
     end
   end
 end
+
+describe MethodHolder do
+  
+  it "returns the number 5" do
+    expect(subject.give_me(5)).to eq(5)
+  end
+  
+end
+
+describe "a method" do
+  it "returns the square of 5" do
+    expect(give_square(5)).to eq(25)
+  end
+end
