@@ -71,3 +71,26 @@ describe Ranger do
     end
   end
 end
+
+describe QRanger do
+  
+  context "default range" do
+    it "should return a number between 0 and 5" do
+      expect(subject.random_in_range).to be_between(0, 5).inclusive
+    end
+  end
+  
+  context "range between 60 and 90" do
+    let(:qranger) { QRanger.new(60, 90) }
+    it "should return a number between 60 and 90" do
+      expect(qranger.random_in_range).to be_between(60, 90).inclusive
+    end
+  end
+  
+  context "range between 1 and 10" do
+    let(:qranger) { QRanger.new(1, 10) }
+    it "should return a number between 1 and 10" do
+      expect(qranger.random_in_range).to be_between(1, 10).inclusive
+    end
+  end
+end

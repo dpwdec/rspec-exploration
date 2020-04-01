@@ -54,3 +54,13 @@ class Ranger
     rand(@range[0]..@range[1])
   end
 end
+
+class QRanger
+  def initialize(min=0,max=5)
+    @range = [min, max]
+  end
+  
+  def random_in_range
+    rand(@range[0]..@range[1])
+  end
+end
