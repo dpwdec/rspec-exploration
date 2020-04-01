@@ -41,4 +41,33 @@ describe Instancer do
     end
   end
   
+  it "has an instance_store" do
+    expect(subject.instance_store).to be_kind_of(Store)
+  end
+  
+  it "generates a random number greater than store" do
+    expect(subject.instance_store.random_store).to be > 20
+  end
+end
+
+describe Ranger do
+  context "range between 10 and 20" do
+    before do
+      @ranger = Ranger.new
+      @ranger.range=[10,20]
+    end
+    it "should return a random number between 10 and 20" do
+      expect(@ranger.random_in_range).to be_between(10, 20).inclusive
+    end
+  end
+  
+  context "range between 50 and 100" do
+    before do
+      @ranger = Ranger.new
+      @ranger.range=[50,100]
+    end
+    it "should return a number between 50 and 100" do
+      expect(@ranger.random_in_range).to be_between(50, 100).inclusive
+    end
+  end
 end
